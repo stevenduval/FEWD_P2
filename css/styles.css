@@ -22,7 +22,7 @@ h3 {
     font-weight: 400;
 }
 
-header, main, footer, nav ul {
+header, main, nav ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -46,16 +46,16 @@ nav ul {
 }
 
 nav ul > li {
-    text-transform: uppercase;
-    font-weight: 500;
     background-color: #fff;
     width: 100%;
     padding: 10px 0;
 }
 
-nav ul > li > a {
+nav ul > li > a, footer p, footer a {
     text-decoration: none;
     color: #4a4a4a;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 #home {
@@ -66,7 +66,8 @@ nav ul > li > a {
     margin-top: 50px;
 }
 
-#home p {
+#home p, 
+#contact p {
     color: #868686;
 }
 
@@ -81,7 +82,7 @@ nav ul > li > a {
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 30px;
+    padding: 20px;
     margin-top: 30px;
 }
 
@@ -101,9 +102,38 @@ nav ul > li > a {
     padding: 15px 0;
 }
 
+#contact {
+    padding: 0 20px;
+}
+
+footer {
+    font-size: 14px;
+    padding: 0 20px;
+}
+
+footer div {
+    border-top: 2px solid #EEE;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+
+footer ul {
+    display: none;
+}
+
 @media screen and (min-width: 768px) {
-    nav ul {
+
+    nav ul, 
+    #home, 
+    #portfolio {
         flex-direction: row;
+    }
+
+    nav ul {
         gap: 30px;
     }
 
@@ -114,11 +144,8 @@ nav ul > li > a {
     }
 
     #home {
-        display: flex;
-        padding: 0 20px;
-        flex-direction: row;
-        margin-top: 50px;
-        gap: 25px;
+        padding: 0 30px;
+        gap: 20px;
     }
 
     #home p {
@@ -132,10 +159,6 @@ nav ul > li > a {
     }
 
     #portfolio {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        padding: 30px;
         margin-top: 65px;
     }
 
@@ -145,6 +168,17 @@ nav ul > li > a {
 
     #portfolio div {
         flex-basis: 49%;
+    }
+
+    footer > div > a {
+        display: none;
+    }
+
+    footer ul {
+        display: flex;
+        list-style-type: none;
+        gap: 30px;
+        padding: 0;
     }
 
 }
@@ -157,55 +191,21 @@ nav ul > li > a {
     }
 
     header {
-        display: flex;
         justify-content: space-between;
-        align-items: center;
-        padding: 0 30px;
         flex-direction: row;
+        padding: 0 30px;
     }
 
     nav {
         width: unset;
-
     }
 
     nav ul {
-        display: flex;
-        list-style-type: none;
         flex-direction: row;
-        gap: 30px;
-    }
-
-    nav ul>li {
-        text-transform: uppercase;
-        font-weight: 500;
-    }
-
-    nav ul>li>a {
-        text-decoration: none;
-        color: #4a4a4a;
     }
 
     #home {
-        display: flex;
         justify-content: space-between;
-        padding: 0 30px;
-    }
-
-    #portfolio {
-        background-color: #fff;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        padding: 30px;
-        margin-top: 65px;
-    }
-
-    #portfolio img {
-        width: 100%;
-        height: auto;
-        margin: 0 auto;
     }
 
     #portfolio div {
